@@ -26,40 +26,24 @@ Here is your roadmap for the semester.  Each week, follow the general process be
 | Week 1 <br> 9.12.22 | • introduction | | @dignazion20 |
 | Week 2 <br> 9.19.22 | • sampling | Reflection 1 | @wright98 <br> @gupta20 <br> @parker15 <br> @wang21 <br> @prisgerry <br> @utts4, chp 4|
 | Week 3 <br> 9.26.22 | • experiments <br> • observational<br>  studies | Reflection 2 | @meier89 <br> @roberts21 <br> @utts5, chp 5 |
+| Week 4 <br> 10.3.22 | • visualizing data | Reflection 3 | @lupi16, weeks 3, 11, 25, & 52 <br> @utts9, chp 9 |
+| Week 5 <br> 10.10.22 | • causation | Dear Data | @carroll19 <br> @carroll18 <br> @utts11, chp 11|
+| 10.17.22 | fall break / inside office hours | draft of content |  |
+| Week 6 <br> 10.24.22 | • statistical <br> significance | Reflection 4 | @bohannon15a <br> @bohannon15b <br> @utts12, chp 12 |
+| Week 7 <br> 10.31.22 | • probability | Reflection 5 | @kaye87^[Reading is a little dense.  Read it quickly once.  Then try to read it again to understand some of the bigger ideas.] <br> @elster99 <br> @utts15, chp 15 |
+| Week 8 <br> 11.7.22 | • confidence <br> intervals <br> • projects | Reflection 6 | @kessler18 <br> @kishore18 <br> @utts19, chp 19 |
+| Week 9 <br> 11.14.22 | • ethics <br> • projects | Reflection 7 | @app19 <br> @utts26, chp 26^[In course reader, not in textbook.] <br> @wiki19 <br> @HHS03 |
+| 11.21.22 | • projects | Reflection 8 | |
+| Week 10 <br> 11.28.22 | • projects | | @angwin16 <br> @oneil16 |
+| 12.5.22 | • closing ceremonies | | |
+| 12.12.22| • inside debrief | Final Paper | | 
+| 12.13.22 <br> 2-5pm| • outside debrief | Final Paper | | 
+
 :::
 
 
 
 <!--
-
-3: 9/26/22 & Experim \& Obs Study & Reflect 2  &  Polio  \\
-& & & Utts Chp 5\\
-\hline
-4: 10/3/22 & Measure / Plot & Reflect 3 & Dear Data \\
-& & & Utts Chp 9\\
-\hline
-5: 10/10/22 & Causation & Dear Data &  Sunscreen, Wellness\\
-& & & Utts Chp 11\\
-\hline
-\ \ \ \ 10/17/22 & Fall Break / inside office hours & draft of content & check-ins \\
-\\
-\hline
-6: 10/24/22 & Stat Sig & Reflect 4 & Chocolate \\
-& & & Utts Chp 21\\
-\hline
-7: 10/31/22 &  Probability & Reflect 5 & Forensics \\
-& & & Utts Chp 15\\
-\hline
-8: 11/7/22 & Conf Intervals / Projects & Reflect 6 & Maria\\
-& & & Utts Chp 19\\
-\hline
-9: 11/14/22 & Ethics  / Projects & Reflect 7 & IRB, Healthcare App \\
-& & & Utts Chp 26\\
-\hline
-\ \ \ \ 11/21/22 & Projects & Reflect 8 & \\
-\hline
-10: 11/28/22 & Projects & &  COMPAS\\
-\\
 \hline
 \ \ \ \ 12/5/22 & Closing Ceremonies & &  \\
 \\
