@@ -1,0 +1,79 @@
+---
+title: "Schedule"
+description: |
+  Schedule for Math 57, Thinking with Data, Fall 2022
+execute: 
+  message: false
+  warning: false
+bibliography: m57.bib
+tbl-colwidths: [15,20,20,45]
+---
+
+Here is your roadmap for the semester.  Each week, follow the general process below:
+
+- Read the assigned weekly material before coming to class. Use the textbook as a reference if there are ideas that are unclear.  Write down anything you find interesting or unclear.
+- Attend class, participate fully.  Present your thoughts on the readings.
+- Write a reflection based on the in-class discussion as well as your interpretation of the readings.
+
+
+## Schedule
+
+:::{.column-body-outset}
+| date | topic | due | reading |
+|---------|:-----|:------|:------|
+| 8.29.22     | • orientation   |    |     |
+| Week 0 <br> 9.5.22     | • orientation | (Labor Day, no class)  |  @alexander12 <br> @pompa13 <br> @perry13   |
+| Week 1 <br> 9.12.22 | • introduction | | @dignazion20 |
+| Week 2 <br> 9.19.22 | • sampling | Reflection 1 | @wright98 <br> @gupta20 <br> @parker15 <br> @wang21 <br> @prisgerry <br> @utts4, chp 4|
+| Week 3 <br> 9.26.22 | • experiments <br> • observational<br>  studies | Reflection 2 | @meier89 <br> @roberts21 <br> @utts5, chp 5 |
+:::
+
+
+
+<!--
+
+3: 9/26/22 & Experim \& Obs Study & Reflect 2  &  Polio  \\
+& & & Utts Chp 5\\
+\hline
+4: 10/3/22 & Measure / Plot & Reflect 3 & Dear Data \\
+& & & Utts Chp 9\\
+\hline
+5: 10/10/22 & Causation & Dear Data &  Sunscreen, Wellness\\
+& & & Utts Chp 11\\
+\hline
+\ \ \ \ 10/17/22 & Fall Break / inside office hours & draft of content & check-ins \\
+\\
+\hline
+6: 10/24/22 & Stat Sig & Reflect 4 & Chocolate \\
+& & & Utts Chp 21\\
+\hline
+7: 10/31/22 &  Probability & Reflect 5 & Forensics \\
+& & & Utts Chp 15\\
+\hline
+8: 11/7/22 & Conf Intervals / Projects & Reflect 6 & Maria\\
+& & & Utts Chp 19\\
+\hline
+9: 11/14/22 & Ethics  / Projects & Reflect 7 & IRB, Healthcare App \\
+& & & Utts Chp 26\\
+\hline
+\ \ \ \ 11/21/22 & Projects & Reflect 8 & \\
+\hline
+10: 11/28/22 & Projects & &  COMPAS\\
+\\
+\hline
+\ \ \ \ 12/5/22 & Closing Ceremonies & &  \\
+\\
+\hline
+\ \ \ \ 12/12/22 & Debrief & Final Paper Due & (Monday) inside\\
+\ \ \ \ 12/13/22 & Debrief & Final Paper Due & (Tuesday) outside (2-5pm)
+\\
+\hline
+\end{tabular}\\
+
+-->
+
+
+**Text**:  Weekly readings will be based, in part, on *Seeing Through Statistics*, by Jessica Utts, $2^{nd}$ edition.  Except the text by Utts, all readings are available in the course packet.
+
+::: {#refs}
+:::
