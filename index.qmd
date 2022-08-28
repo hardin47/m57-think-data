@@ -42,22 +42,9 @@ Here is your roadmap for the semester.  Each week, follow the general process be
 :::
 
 
-
-<!--
-\hline
-\ \ \ \ 12/5/22 & Closing Ceremonies & &  \\
-\\
-\hline
-\ \ \ \ 12/12/22 & Debrief & Final Paper Due & (Monday) inside\\
-\ \ \ \ 12/13/22 & Debrief & Final Paper Due & (Tuesday) outside (2-5pm)
-\\
-\hline
-\end{tabular}\\
-
--->
-
-
 **Text**:  Weekly readings will be based, in part, on *Seeing Through Statistics*, by Jessica Utts, $2^{nd}$ edition.  Except the text by Utts, all readings are available in the course packet.
+
+## References
 
 ::: {#refs}
 :::
