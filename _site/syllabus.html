@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.60">
+<meta name="generator" content="quarto-1.2.256">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,7 +12,7 @@
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: 1;}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -69,17 +69,22 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="https://m57-think-data.netlify.app/">
-    <img src="./images/st47s.png" alt="">
+      <div class="navbar-brand-container">
+    <a href="https://m57-think-data.netlify.app/" class="navbar-brand navbar-brand-logo">
+    <img src="./images/st47s.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="https://m57-think-data.netlify.app/">
     <span class="navbar-title">Thinking with Data</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./syllabus.html" aria-current="page">Syllabus</a>
+    <a class="nav-link active" href="./syllabus.html" aria-current="page">
+ <span class="menu-text">Syllabus</span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -105,6 +110,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -121,7 +127,14 @@ California Rehabilitation Center, Norco, CA</p>
 </section>
 <section id="learning-objectives" class="level4">
 <h4 class="anchored" data-anchor-id="learning-objectives">Learning Objectives:</h4>
-<p>The goal of the course is for students to learn to critically evaluate numbers and related claims that are presented to them. To meet the goal, students will demonstrate their ability to achieve the following objectives: * Given a report on a set of data, identify the population from which the data were collected and whether the sampling frame is the same as the population of interest. * Identify whether a study is experimental or observational. List possible confounding variables and alternative causal mechanisms. * Describe aspects of a graph which are informative and those which are misleading. * Characterize different psychological aspects of probability estimation, and identify when those aspects are being used in reporting. * Articulate different ethical aspects of the data collection, modeling, or reporting from a given data analysis.</p>
+<p>The goal of the course is for students to learn to critically evaluate numbers and related claims that are presented to them. To meet the goal, students will demonstrate their ability to achieve the following objectives:</p>
+<ul>
+<li>Given a report on a set of data, identify the population from which the data were collected and whether the sampling frame is the same as the population of interest.</li>
+<li>Identify whether a study is experimental or observational. List possible confounding variables and alternative causal mechanisms.</li>
+<li>Describe aspects of a graph which are informative and those which are misleading.</li>
+<li>Characterize different psychological aspects of probability estimation, and identify when those aspects are being used in reporting.</li>
+<li>Articulate different ethical aspects of the data collection, modeling, or reporting from a given data analysis.</li>
+</ul>
 </section>
 <section id="readings" class="level4">
 <h4 class="anchored" data-anchor-id="readings">Readings:</h4>
@@ -254,7 +267,8 @@ California Rehabilitation Center, Norco, CA</p>
 </div><div class="column" style="width:50%;">
 <ul>
 <li>statistical significance</li>
-<li>probability* confidence intervals</li>
+<li>probability</li>
+<li>confidence intervals</li>
 <li>ethical dilemmas in statistics</li>
 <li>chapter in the book that you read on your own</li>
 <li>new topic from your special project</li>
@@ -326,7 +340,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -355,31 +386,49 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
       // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href');
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
