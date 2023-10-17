@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.60">
+<meta name="generator" content="quarto-1.4.373">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,19 +13,21 @@
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: 1;}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -39,8 +41,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -67,6 +68,12 @@ div.csl-indent {
   "panel-placement": "end",
   "type": "overlay",
   "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -76,10 +83,12 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -90,21 +99,28 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="https://m57-think-data.netlify.app/">
-    <img src="./images/st47s.png" alt="">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://m57-think-data.netlify.app/" class="navbar-brand navbar-brand-logo">
+    <img src="./images/st47s.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="https://m57-think-data.netlify.app/">
     <span class="navbar-title">Thinking with Data</span>
-  </a>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html">Syllabus</a>
+    <a class="nav-link" href="./syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -131,9 +147,11 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
+
 
 </header>
 
@@ -270,120 +288,121 @@ div.csl-indent {
 <p><strong>Text</strong>: Weekly readings will be based, in part, on <em>Seeing Through Statistics</em>, by Jessica Utts, <span class="math inline">\(2^{nd}\)</span> edition. Except the text by Utts, all readings are available in the course packet.</p>
 </section>
 <section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-app19" class="csl-entry" role="listitem">
+<span>“AI Ethics Case - Automated Healthcare App.”</span> 2019. <em>Dialogues on AI and Ethics</em>. <a href="https://aiethics.princeton.edu/">https://aiethics.princeton.edu/</a>.
+</div>
+<div id="ref-alexander12" class="csl-entry" role="listitem">
+Alexander, Michelle. 2012. <span>“The New Jim Crow: Mass Incarceration in the Age of Colorblindness,”</span> Chapter 5.
+</div>
+<div id="ref-angwin16" class="csl-entry" role="listitem">
+Angwin, Julia, Jeff Larson, Surya Mattu, and Lauren Kirchner. May 23, 2016. <span>“Machine Bias.”</span> <em>ProPublica</em>, May 23, 2016. <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a>.
+</div>
+<div id="ref-bohannon15b" class="csl-entry" role="listitem">
+Bohannon, Johannes, Diana Kock, Peter Homm, and Alexander Driehaus. 2015. <span>“Chocolate with High Cocoa Content as a Weight-Loss Accelerator.”</span> <em>International Archives of Medicine</em>.
+</div>
+<div id="ref-bohannon15a" class="csl-entry" role="listitem">
+Bohannon, John. May 27, 2015. <span>“I Fooled Millions into Thinking Chocolate Helps Weight Loss. Here’s How.”</span> <em>Gizmodo</em>.
+</div>
+<div id="ref-carroll19" class="csl-entry" role="listitem">
+Carroll, Aaron. June 10, 2019. <span>“How Safe Is Sunscreen?”</span> <em>The New York Times</em>.
+</div>
+<div id="ref-carroll18" class="csl-entry" role="listitem">
+———. August 6, 2018. <span>“Workplace Wellness Programs Don’t Work Well. Why Some Studies Show Otherwise.”</span> <em>The New York Times</em>, August 6, 2018.
+</div>
+<div id="ref-dignazion20" class="csl-entry" role="listitem">
+D’Ignazio, Catherine, and Lauren Klein. 2020. <span>“The Power Chapter.”</span> In <em>Data Feminism</em>, Chapter 1. <a href="https://data-feminism.mitpress.mit.edu/">https://data-feminism.mitpress.mit.edu/</a>.
+</div>
+<div id="ref-elster99" class="csl-entry" role="listitem">
+Elster, Naomi. December 6, 2017. <span>“How Forensic DNA Evidence Can Lead to Wrongful Convictions.”</span> <em><span>JSTOR</span> Daily Newsletters SCIENCE &amp; TECHNOLOGY</em>, December 6, 2017. <a href="https://daily.jstor.org/forensic-dna-evidence-can-lead-wrongful-convictions/">https://daily.jstor.org/forensic-dna-evidence-can-lead-wrongful-convictions/</a>.
+</div>
+<div id="ref-gupta20" class="csl-entry" role="listitem">
+Gupta, Sujata. 2020. <span>“To Fight Discrimination, the <span>U.S.</span> Census Needs a Different Race Question.”</span> <em>ScienceNews</em>. <a href="https://www.sciencenews.org/article/census-2020-race-ethnicity-questions">https://www.sciencenews.org/article/census-2020-race-ethnicity-questions</a>.
+</div>
+<div id="ref-kaye87" class="csl-entry" role="listitem">
+Kaye, D. H. Winter 1987. <span>“The Admissibility of "Probability Evidence" in Criminal Trials - Part II.”</span> <em>Jurimetrics</em>, no. 2 (Winter 1987): 160–72. <a href="https://www.jstor.org/stable/29762002">https://www.jstor.org/stable/29762002</a>.
+</div>
+<div id="ref-kessler18" class="csl-entry" role="listitem">
+Kessler, Glenn. June 1, 2018. <span>“Did 4,645 People Die in Hurricane Maria? Nope.”</span> <em>The Washington Post</em>, June 1, 2018.
+</div>
+<div id="ref-kishore18" class="csl-entry" role="listitem">
+Kishore, N., D. Marques, A. Mahmud, M. Kiang, I. Rodriguez, A. Fuller, P. Ebner, et al. July 12, 2018. <span>“Mortality in Puerto Rico After Hurricane Maria.”</span> <em>The New England Journal of Medicine</em> 379 (July 12, 2018): 162–70.
+</div>
+<div id="ref-lupi16" class="csl-entry" role="listitem">
+Lupi, Giorgia, and Stefanie Posavec. 2016. <em>Dear Data</em>. <a href="http://www.dear-data.com/thebook">http://www.dear-data.com/thebook</a>.
+</div>
+<div id="ref-meier89" class="csl-entry" role="listitem">
+Meier, Paul. 1989. <span>“The Biggest Public Health Experiment Ever: The 1954 Field Trial of the Salk Poliomyelitis Vaccine.”</span> In <em>Statistics: A Guide to the Unknown</em>, 3–14.
+</div>
+<div id="ref-oneil16" class="csl-entry" role="listitem">
+O’Neil, Cathy. 2016. <span>“Ineligible to Serve.”</span> In <em>Weapons of Math Destruction</em>, Chapter 6.
+</div>
+<div id="ref-parker15" class="csl-entry" role="listitem">
+Parker, Kim, Juliana Menasce Horowitz, Rich Morin, and Mark Hugo Lopez. 2015. <span>“Chapter 1: Race and Multiracial Americans in the u.s. Census.”</span> In <em>Multiracial in America: Pew Research Center</em>. <a href="https://www.pewresearch.org/social-trends/2015/06/11/chapter-1-race-and-multiracial-americans-in-the-u-s-census/">https://www.pewresearch.org/social-trends/2015/06/11/chapter-1-race-and-multiracial-americans-in-the-u-s-census/</a>.
+</div>
+<div id="ref-perry13" class="csl-entry" role="listitem">
+Perry, Paul. 2013. <span>“Death of a Street-Gang Warrior.”</span> In <em>Turning Teaching Inside Out</em>, Chapter 4.
+</div>
+<div id="ref-pompa13" class="csl-entry" role="listitem">
+Pompa, Lori. 2013. <span>“Drawing Forth, Finding Voice, Making Change: Inside-Out Learning as Transformative Pedagogy.”</span> In <em>Turning Teaching Inside Out</em>, Chapter 2.
+</div>
+<div id="ref-prisgerry" class="csl-entry" role="listitem">
+<span>“Prison Gerrymandering Explained.”</span> 2021. <em>Democracy Docket</em>. <a href="https://www.democracydocket.com/explainers/prison-gerrymandering-explained/">https://www.democracydocket.com/explainers/prison-gerrymandering-explained/</a>.
+</div>
+<div id="ref-roberts21" class="csl-entry" role="listitem">
+Roberts, Laura. February 26, 2021. <span>“Pfizer, AstraZeneca COVID Vaccines Are Not yet Approved for Kids. How Are Clinical Trials Run for Children?”</span> <em>ABC Health &amp; Wellbeing</em>, February 26, 2021. <a href="https://www.abc.net.au/news/health/2021-02-26/vaccine-drug-trial-australia-children-covid-astrazeneca-pfizer/13180282">https://www.abc.net.au/news/health/2021-02-26/vaccine-drug-trial-australia-children-covid-astrazeneca-pfizer/13180282</a>.
+</div>
+<div id="ref-HHS03" class="csl-entry" role="listitem">
+US Department of Health &amp; Human Services. May 23, 2003. <span>“Prisoner Involvement in Research,”</span> May 23, 2003. <a href="https://www.hhs.gov/ohrp/regulations-and-policy/guidance/prisoner-research-ohrp-guidance-2003/index.html">https://www.hhs.gov/ohrp/regulations-and-policy/guidance/prisoner-research-ohrp-guidance-2003/index.html</a>.
+</div>
+<div id="ref-utts11" class="csl-entry" role="listitem">
+Utts, Jessica. 1999a. <span>“11. Relationships Can Be Deceiving.”</span> In <em>Seeing Through Statistics</em>, 177–94.
+</div>
+<div id="ref-utts12" class="csl-entry" role="listitem">
+———. 1999b. <span>“12. Respecting Chance – Testing Hypotheses in Research.”</span> In <em>Seeing Through Statistics</em>, 371–87.
+</div>
+<div id="ref-utts15" class="csl-entry" role="listitem">
+———. 1999c. <span>“15. Understanding Probability and Long-Term Expectations.”</span> In <em>Seeing Through Statistics</em>, 256–78.
+</div>
+<div id="ref-utts19" class="csl-entry" role="listitem">
+———. 1999d. <span>“19. Estimating Proportions with Confidence.”</span> In <em>Seeing Through Statistics</em>, 335–50.
+</div>
+<div id="ref-utts4" class="csl-entry" role="listitem">
+———. 1999e. <span>“4. How to Get a Good Sample.”</span> In <em>Seeing Through Statistics</em>, 48–69.
+</div>
+<div id="ref-utts5" class="csl-entry" role="listitem">
+———. 1999f. <span>“5. Experiments and Observational Studies.”</span> In <em>Seeing Through Statistics</em>, 70–91.
+</div>
+<div id="ref-utts9" class="csl-entry" role="listitem">
+———. 1999g. <span>“9. Plots, Graphs, and Pictures.”</span> In <em>Seeing Through Statistics</em>, 140–56.
+</div>
+<div id="ref-utts26" class="csl-entry" role="listitem">
+———. 2004. <span>“26. Ethics in Statistical Studies.”</span> In <em>Seeing Through Statistics</em>, 484–505.
+</div>
+<div id="ref-wang21" class="csl-entry" role="listitem">
+Wang, Sam, and Jonathan Cervas. 2021. <span>“The GOP Scared Latinos from the Census. Now That May Cost the Party Red Seats.”</span> <em>The Washington Post</em>. <a href="https://www.washingtonpost.com/outlook/2021/05/01/hispanics-census-undercount-house-seats/">https://www.washingtonpost.com/outlook/2021/05/01/hispanics-census-undercount-house-seats/</a>.
+</div>
+<div id="ref-wiki19" class="csl-entry" role="listitem">
+Wikipedia. 2019. <span>“Institutional Review Board – <span>W</span>ikipedia<span>,</span> the Free Encyclopedia.”</span> <a href="https://en.wikipedia.org/w/index.php?title=Institutional_review_board&amp;oldid=895918834">https://en.wikipedia.org/w/index.php?title=Institutional_review_board&amp;oldid=895918834</a>.
+</div>
+<div id="ref-wright98" class="csl-entry" role="listitem">
+Wright, Tommy. 1998. <span>“Sampling and Census 2000: The Concepts.”</span> <em>American Scientist</em>, 245–53.
+</div>
+</div>
 
-
-
+<p>:::</p>
 
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-app19" class="csl-entry" role="doc-biblioentry">
-<span>“AI Ethics Case - Automated Healthcare App.”</span> 2019. <em>Dialogues on AI and Ethics</em>. <a href="https://aiethics.princeton.edu/">https://aiethics.princeton.edu/</a>.
-</div>
-<div id="ref-alexander12" class="csl-entry" role="doc-biblioentry">
-Alexander, Michelle. 2012. <span>“The New Jim Crow: Mass Incarceration in the Age of Colorblindness,”</span> Chapter 5.
-</div>
-<div id="ref-angwin16" class="csl-entry" role="doc-biblioentry">
-Angwin, Julia, Jeff Larson, Surya Mattu, and Lauren Kirchner. May 23, 2016. <span>“Machine Bias.”</span> <em>ProPublica</em>, May 23, 2016. <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a>.
-</div>
-<div id="ref-bohannon15b" class="csl-entry" role="doc-biblioentry">
-Bohannon, Johannes, Diana Kock, Peter Homm, and Alexander Driehaus. 2015. <span>“Chocolate with High Cocoa Content as a Weight-Loss Accelerator.”</span> <em>International Archives of Medicine</em>.
-</div>
-<div id="ref-bohannon15a" class="csl-entry" role="doc-biblioentry">
-Bohannon, John. May 27, 2015. <span>“I Fooled Millions into Thinking Chocolate Helps Weight Loss. Here’s How.”</span> <em>Gizmodo</em>.
-</div>
-<div id="ref-carroll19" class="csl-entry" role="doc-biblioentry">
-Carroll, Aaron. June 10, 2019. <span>“How Safe Is Sunscreen?”</span> <em>The New York Times</em>.
-</div>
-<div id="ref-carroll18" class="csl-entry" role="doc-biblioentry">
-———. August 6, 2018. <span>“Workplace Wellness Programs Don’t Work Well. Why Some Studies Show Otherwise.”</span> <em>The New York Times</em>, August 6, 2018.
-</div>
-<div id="ref-dignazion20" class="csl-entry" role="doc-biblioentry">
-D’Ignazio, Catherine, and Lauren Klein. 2020. <span>“The Power Chapter.”</span> In <em>Data Feminism</em>, Chapter 1. <a href="https://data-feminism.mitpress.mit.edu/">https://data-feminism.mitpress.mit.edu/</a>.
-</div>
-<div id="ref-elster99" class="csl-entry" role="doc-biblioentry">
-Elster, Naomi. December 6, 2017. <span>“How Forensic DNA Evidence Can Lead to Wrongful Convictions.”</span> <em><span>JSTOR</span> Daily Newsletters SCIENCE &amp; TECHNOLOGY</em>, December 6, 2017. <a href="https://daily.jstor.org/forensic-dna-evidence-can-lead-wrongful-convictions/">https://daily.jstor.org/forensic-dna-evidence-can-lead-wrongful-convictions/</a>.
-</div>
-<div id="ref-gupta20" class="csl-entry" role="doc-biblioentry">
-Gupta, Sujata. 2020. <span>“To Fight Discrimination, the <span>U.S.</span> Census Needs a Different Race Question.”</span> <em>ScienceNews</em>. <a href="https://www.sciencenews.org/article/census-2020-race-ethnicity-questions">https://www.sciencenews.org/article/census-2020-race-ethnicity-questions</a>.
-</div>
-<div id="ref-kaye87" class="csl-entry" role="doc-biblioentry">
-Kaye, D. H. Winter 1987. <span>“The Admissibility of "Probability Evidence" in Criminal Trials - Part II.”</span> <em>Jurimetrics</em>, no. 2 (Winter 1987): 160–72. <a href="https://www.jstor.org/stable/29762002">https://www.jstor.org/stable/29762002</a>.
-</div>
-<div id="ref-kessler18" class="csl-entry" role="doc-biblioentry">
-Kessler, Glenn. June 1, 2018. <span>“Did 4,645 People Die in Hurricane Maria? Nope.”</span> <em>The Washington Post</em>, June 1, 2018.
-</div>
-<div id="ref-kishore18" class="csl-entry" role="doc-biblioentry">
-Kishore, N., D. Marques, A. Mahmud, M. Kiang, I. Rodriguez, A. Fuller, P. Ebner, et al. July 12, 2018. <span>“Mortality in Puerto Rico After Hurricane Maria.”</span> <em>The New England Journal of Medicine</em> 379 (July 12, 2018): 162–70.
-</div>
-<div id="ref-lupi16" class="csl-entry" role="doc-biblioentry">
-Lupi, Giorgia, and Stefanie Posavec. 2016. <em>Dear Data</em>. <a href="http://www.dear-data.com/thebook">http://www.dear-data.com/thebook</a>.
-</div>
-<div id="ref-meier89" class="csl-entry" role="doc-biblioentry">
-Meier, Paul. 1989. <span>“The Biggest Public Health Experiment Ever: The 1954 Field Trial of the Salk Poliomyelitis Vaccine.”</span> In <em>Statistics: A Guide to the Unknown</em>, 3–14.
-</div>
-<div id="ref-oneil16" class="csl-entry" role="doc-biblioentry">
-O’Neil, Cathy. 2016. <span>“Ineligible to Serve.”</span> In <em>Weapons of Math Destruction</em>, Chapter 6.
-</div>
-<div id="ref-parker15" class="csl-entry" role="doc-biblioentry">
-Parker, Kim, Juliana Menasce Horowitz, Rich Morin, and Mark Hugo Lopez. 2015. <span>“Chapter 1: Race and Multiracial Americans in the u.s. Census.”</span> In <em>Multiracial in America: Pew Research Center</em>. <a href="https://www.pewresearch.org/social-trends/2015/06/11/chapter-1-race-and-multiracial-americans-in-the-u-s-census/">https://www.pewresearch.org/social-trends/2015/06/11/chapter-1-race-and-multiracial-americans-in-the-u-s-census/</a>.
-</div>
-<div id="ref-perry13" class="csl-entry" role="doc-biblioentry">
-Perry, Paul. 2013. <span>“Death of a Street-Gang Warrior.”</span> In <em>Turning Teaching Inside Out</em>, Chapter 4.
-</div>
-<div id="ref-pompa13" class="csl-entry" role="doc-biblioentry">
-Pompa, Lori. 2013. <span>“Drawing Forth, Finding Voice, Making Change: Inside-Out Learning as Transformative Pedagogy.”</span> In <em>Turning Teaching Inside Out</em>, Chapter 2.
-</div>
-<div id="ref-prisgerry" class="csl-entry" role="doc-biblioentry">
-<span>“Prison Gerrymandering Explained.”</span> 2021. <em>Democracy Docket</em>. <a href="https://www.democracydocket.com/explainers/prison-gerrymandering-explained/">https://www.democracydocket.com/explainers/prison-gerrymandering-explained/</a>.
-</div>
-<div id="ref-roberts21" class="csl-entry" role="doc-biblioentry">
-Roberts, Laura. February 26, 2021. <span>“Pfizer, AstraZeneca COVID Vaccines Are Not yet Approved for Kids. How Are Clinical Trials Run for Children?”</span> <em>ABC Health &amp; Wellbeing</em>, February 26, 2021. <a href="https://www.abc.net.au/news/health/2021-02-26/vaccine-drug-trial-australia-children-covid-astrazeneca-pfizer/13180282">https://www.abc.net.au/news/health/2021-02-26/vaccine-drug-trial-australia-children-covid-astrazeneca-pfizer/13180282</a>.
-</div>
-<div id="ref-HHS03" class="csl-entry" role="doc-biblioentry">
-US Department of Health &amp; Human Services. May 23, 2003. <span>“Prisoner Involvement in Research,”</span> May 23, 2003. <a href="https://www.hhs.gov/ohrp/regulations-and-policy/guidance/prisoner-research-ohrp-guidance-2003/index.html">https://www.hhs.gov/ohrp/regulations-and-policy/guidance/prisoner-research-ohrp-guidance-2003/index.html</a>.
-</div>
-<div id="ref-utts11" class="csl-entry" role="doc-biblioentry">
-Utts, Jessica. 1999a. <span>“11. Relationships Can Be Deceiving.”</span> In <em>Seeing Through Statistics</em>, 177–94.
-</div>
-<div id="ref-utts12" class="csl-entry" role="doc-biblioentry">
-———. 1999b. <span>“12. Respecting Chance – Testing Hypotheses in Research.”</span> In <em>Seeing Through Statistics</em>, 371–87.
-</div>
-<div id="ref-utts15" class="csl-entry" role="doc-biblioentry">
-———. 1999c. <span>“15. Understanding Probability and Long-Term Expectations.”</span> In <em>Seeing Through Statistics</em>, 256–78.
-</div>
-<div id="ref-utts19" class="csl-entry" role="doc-biblioentry">
-———. 1999d. <span>“19. Estimating Proportions with Confidence.”</span> In <em>Seeing Through Statistics</em>, 335–50.
-</div>
-<div id="ref-utts4" class="csl-entry" role="doc-biblioentry">
-———. 1999e. <span>“4. How to Get a Good Sample.”</span> In <em>Seeing Through Statistics</em>, 48–69.
-</div>
-<div id="ref-utts5" class="csl-entry" role="doc-biblioentry">
-———. 1999f. <span>“5. Experiments and Observational Studies.”</span> In <em>Seeing Through Statistics</em>, 70–91.
-</div>
-<div id="ref-utts9" class="csl-entry" role="doc-biblioentry">
-———. 1999g. <span>“9. Plots, Graphs, and Pictures.”</span> In <em>Seeing Through Statistics</em>, 140–56.
-</div>
-<div id="ref-utts26" class="csl-entry" role="doc-biblioentry">
-———. 2004. <span>“26. Ethics in Statistical Studies.”</span> In <em>Seeing Through Statistics</em>, 484–505.
-</div>
-<div id="ref-wang21" class="csl-entry" role="doc-biblioentry">
-Wang, Sam, and Jonathan Cervas. 2021. <span>“The GOP Scared Latinos from the Census. Now That May Cost the Party Red Seats.”</span> <em>The Washington Post</em>. <a href="https://www.washingtonpost.com/outlook/2021/05/01/hispanics-census-undercount-house-seats/">https://www.washingtonpost.com/outlook/2021/05/01/hispanics-census-undercount-house-seats/</a>.
-</div>
-<div id="ref-wiki19" class="csl-entry" role="doc-biblioentry">
-Wikipedia. 2019. <span>“Institutional Review Board – <span>W</span>ikipedia<span>,</span> the Free Encyclopedia.”</span> <a href="https://en.wikipedia.org/w/index.php?title=Institutional_review_board&amp;oldid=895918834">https://en.wikipedia.org/w/index.php?title=Institutional_review_board&amp;oldid=895918834</a>.
-</div>
-<div id="ref-wright98" class="csl-entry" role="doc-biblioentry">
-Wright, Tommy. 1998. <span>“Sampling and Census 2000: The Concepts.”</span> <em>American Scientist</em>, 245–53.
-</div>
-</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>Reading is a little dense. Read it quickly once. Then try to read it again to understand some of the bigger ideas.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>In course reader, not in textbook.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></section></div></main> <!-- /main -->
+</aside><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -411,9 +430,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -425,17 +458,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -445,8 +494,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -454,49 +512,262 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
       // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href');
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        console.log("RESIZE");
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><a href="https://hardin47.netlify.app/research/"></a> <a href="https://hardin47.netlify.app/resume.pdf" target="_blank"><i class="fa-solid fa-bookmark"></i></a> <a href="mailto:jo.hardin@pomona.edu" target="_blank"><i class="fa-solid fa-at"></i></a> <a href="https://scholar.google.com/citations?user=c5Y77poAAAAJ&amp;hl=en" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <a href="https://www.researchgate.net/scientific-contributions/Johanna-Hardin-9764530" target="_blank"><i class="fa-brands fa-researchgate"></i></a><br>
-<a href="https://mobile.twitter.com/jo_hardin47" target="_blank"><i class="fa-brands fa-twitter"></i></a> <a href="https://github.com/hardin47" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+    <div class="nav-footer-left">
+<p><a href="https://hardin47.netlify.app/research/"></a> <a href="https://hardin47.netlify.app/resume.pdf" target="_blank"><i class="fa-solid fa-bookmark"></i></a> <a href="mailto:jo.hardin@pomona.edu" target="_blank"><i class="fa-solid fa-at"></i></a> <a href="https://scholar.google.com/citations?user=c5Y77poAAAAJ&amp;hl=en" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <a href="https://www.researchgate.net/scientific-contributions/Johanna-Hardin-9764530" target="_blank"><i class="fa-brands fa-researchgate"></i></a><br>
+<a href="https://mobile.twitter.com/jo_hardin47" target="_blank"><i class="fa-brands fa-twitter"></i></a> <a href="https://github.com/hardin47" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
     <li class="nav-item">
  <br> © Jo Hardin, 2022 -- <a href="mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
 Math 57 -- Thinking with Data -- Pomona College, Claremont, CA <br>
   </li>  
 </ul>
-      </div>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
+
 
 
 
